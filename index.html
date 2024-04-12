@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>final color</title>
+  <style>
+    body{
+      display: grid;
+      text-align: center;
+      place-content: center;
+      background-color: black;
+     
+    }
+    h2{
+      font-weight: 800;
+      font-size: 3rem;
+      color: white;
+      text-decoration: underline;
+
+    }
+    .container{
+      gap: 50px;
+      display: grid;
+     
+      place-items: center;
+    }
+    button{
+      width: 75px;
+      border-radius: 8px;
+      border:none;
+      color: white;
+      cursor: pointer;
+      font-weight: 900;
+      box-shadow: 1px 1px 3px;
+      aspect-ratio: 1;
+    }
+    #display{
+      width: 275px;
+      height: 275px; /* Add height to div */
+      box-shadow: 2px 3px 4px;
+      border-radius: 9px;
+      aspect-ratio: 1;
+      
+    }
+    #pink{
+      background-color: pink;
+
+    }
+    #skyblue{
+      background-color: skyblue;
+
+    }
+    #coral{
+      background-color: coral;
+
+    }
+    #orange{
+      background-color: orange;
+
+    }
+    #black{
+      background-color: black;
+
+    }
+    #white{
+      background-color: white;
+      color: black;
+    }
+    #purple{
+      background-color: purple;
+    }
+    #yellow{
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h2>Color Plate</h2>
+  <div class="container">
+    <div>
+  <button class="child" id="pink">Pink</button>
+  <button class="child" id="skyblue">Skyblue</button>
+  <button class="child" id="coral">Coral</button>
+  <button class="child" id="orange">Orange</button>
+  <button class="child" id="black">Black</button>
+  <button class="child" id="white">White</button>
+  <button class="child" id="purple">Purple</button>
+  <button class="child" id="yellow">Yellow</button>
+</div>
+  <div id="display"></div>
+</div>
+</body>
+<script>
+  const buttons = document.querySelectorAll("button");
+  const body = document.querySelector("#display");
+
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function(e) {
+      if (e.target.id === 'pink') {
+        body.style.backgroundColor = 'pink';
+        body.style.backgroundImage = 'none'; 
+      } else if (e.target.id === 'skyblue') {
+        body.style.backgroundColor = 'skyblue';
+     
+      } else if (e.target.id === 'coral') {
+        body.style.backgroundColor = 'coral'; 
+      } else if (e.target.id === 'orange') {
+        body.style.backgroundColor = 'orange';
+     
+      } else if (e.target.id === 'black') {
+        body.style.backgroundColor = 'black';
+     
+      } else if (e.target.id === 'white') {
+        body.style.backgroundColor = 'white';
+     
+      } else if (e.target.id === 'purple') {
+        body.style.backgroundColor = 'purple';
+     
+      } else if (e.target.id === 'yellow') {
+        body.style.backgroundColor = 'yellow';
+     
+      }
+    });
+  });
+</script>
+</html>
